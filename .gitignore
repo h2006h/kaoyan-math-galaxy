@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.verify/
+*.log
+.env
+.env.*
+.DS_Store
+*.qoder.site

@@ -1,0 +1,47 @@
+{
+  "accountId": "demo-001",
+  "updatedAt": "2026-11-19",
+  "mastery": {
+    "limit-func": 90, "limit-def": 92, "limit-calc": 85, "limit-inf": 61, "limit-exist": 22, "limit-continue": 74, "limit-closed": null,
+
+    "der-def": 78, "der-calc": 55, "der-implicit": 66, "der-param": 48, "der-high": null, "der-diff": 88, "der-mvt": 18, "der-taylor": 26, "der-lhopital": 70, "der-app": 40, "der-curvature": null,
+
+    "int-def": 68, "int-calc": 33, "int-definite": 81, "int-nl": 65, "int-improper": 25, "int-app": null, "int-phys": null, "int-skill": null,
+
+    "vec-ops": 72, "vec-plane": 64, "vec-line": 35, "vec-surface": null,
+
+    "mv-def": 52, "mv-partial": 44, "mv-chain": 21, "mv-implicit": null, "mv-extreme": null, "mv-gradient": null, "mv-geo": null,
+
+    "mi-def": 62, "mi-calc": 31, "mi-triple": null, "mi-app": null,
+
+    "li-arc": null, "li-coord": null, "li-green": null, "li-surf-area": null, "li-surf-coord": null, "li-gauss": null,
+
+    "ser-def": 45, "ser-positive": 28, "ser-alternating": null, "ser-power": null, "ser-sum": null, "ser-expand": null, "ser-fourier": null,
+
+    "ode-basic": 58, "ode-separable": 82, "ode-homog1": 71, "ode-linear": 30, "ode-bernoulli": null, "ode-exact": null, "ode-reducible": null, "ode-structure": 56, "ode-homogeneous": null, "ode-nonhomogeneous": null, "ode-euler": null, "ode-diff": null,
+
+    "la-det-def": 88, "la-det-expand": 84, "la-det-cramer": 76, "la-det-special": 62,
+
+    "la-mat-ops": 90, "la-mat-inverse": 82, "la-mat-adjugate": 73, "la-mat-elem": 85, "la-mat-rank": 71, "la-mat-block": null,
+
+    "la-vec-linear": 66, "la-vec-rank": 61, "la-vec-equiv": 48, "la-vec-orth": null,
+
+    "la-eq-homog": 69, "la-eq-nonhomog": 55, "la-eq-solvable": 74,
+
+    "la-eig-def": 38, "la-eig-similar": 24, "la-eig-real": 47,
+
+    "la-quad-def": 52, "la-quad-standard": 28, "la-quad-inertia": null, "la-quad-positive": 18,
+
+    "prob-evt-space": 78, "prob-evt-prop": 72, "prob-evt-classic": 64, "prob-evt-cond": 58, "prob-evt-bayes": 42,
+
+    "prob-rv-cdf": 61, "prob-rv-discrete": 55, "prob-rv-cont": 48, "prob-rv-common": 36, "prob-rv-func": 22,
+
+    "prob-multi-joint": 31, "prob-multi-marginal": 26, "prob-multi-indep": 18, "prob-multi-cond": null, "prob-multi-func": null,
+
+    "prob-num-exp": null, "prob-num-var": null, "prob-num-cov": null, "prob-num-moment": null,
+
+    "prob-limit-cheby": null, "prob-limit-clt": null,
+
+    "prob-stat-basic": null, "prob-stat-sampling": null, "prob-stat-moment": null, "prob-stat-mle": null, "prob-stat-eval": null, "prob-stat-ci": null, "prob-stat-test": null
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "knowledge.schema.json",
+  "title": "知识宇宙内容结构：科目 → 章节 → 考点",
+  "type": "object",
+  "required": ["subjects"],
+  "additionalProperties": false,
+  "properties": {
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "description": "科目列表。当前仅高等数学；线性代数、概率论按同构追加即可，场景层无需改动",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "chapters"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "shortName": { "type": "string", "minLength": 1, "description": "窄屏星系切换器用的短标签（高数/线代/概率）" },
+          "chapters": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "points"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+                "name": { "type": "string", "minLength": 1 },
+                "points": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "name", "desc", "chapterId", "highFreq", "difficulty", "examScope"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "pattern": "^[a-z][a-z0-9-]*$",
+                        "description": "全局唯一， Relations/题库/掌握度都以此为主键"
+                      },
+                      "name": { "type": "string", "minLength": 1 },
+                      "desc": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 80,
+                        "description": "一句话描述，直接显示在星球信息面板"
+                      },
+                      "chapterId": {
+                        "type": "string",
+                        "description": "所属章节，必须等于父章节 id（校验脚本强制一致，防止拷贝错章）"
+                      },
+                      "highFreq": {
+                        "type": "boolean",
+                        "description": "高频考点：星球半径 ×1.6、光晕 ×1.35"
+                      },
+                      "difficulty": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 3,
+                        "description": "难度档位：1 基础 / 2 中等 / 3 困难，供组卷与推荐排序"
+                      },
+                      "examScope": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": { "type": "integer", "enum": [1, 2, 3] },
+                        "description": "考研大纲适用科目：1 数一 / 2 数二 / 3 数三，依据历年数学考试大纲标注"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "baseScore": 5,
+  "difficultyCoeff": { "1": 1.0, "2": 1.5, "3": 2.0 },
+  "streakLength": 3,
+  "streakBonus": 5,
+  "initialScore": 50,
+  "minScore": 0,
+  "maxScore": 100,
+  "thresholds": { "mastered": 80, "weak": 30 },
+  "questionsPerRound": 3
+}

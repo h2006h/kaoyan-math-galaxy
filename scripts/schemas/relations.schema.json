@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relations.schema.json",
+  "title": "考点关联关系",
+  "type": "object",
+  "required": ["relations"],
+  "additionalProperties": false,
+  "properties": {
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sourceId", "targetId", "type", "strength"],
+        "additionalProperties": false,
+        "properties": {
+          "sourceId": {
+            "type": "string",
+            "description": "源考点 id，必须存在于 knowledge.json。type=prerequisite 时表示 source 是 target 的前置"
+          },
+          "targetId": { "type": "string", "description": "目标考点 id，必须存在于 knowledge.json" },
+          "type": {
+            "enum": ["prerequisite", "related"],
+            "description": "prerequisite=前置依赖（有向，先学 source 再学 target）；related=一般关联（无向语义）"
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3,
+            "description": "关联强度 1-3：渲染时映射为连线亮度（1→0.35 / 2→0.65 / 3→1.0）"
+          }
+        }
+      }
+    }
+  }
+}
