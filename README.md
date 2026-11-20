@@ -14,7 +14,7 @@
 
 [![在线体验](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C-Qoder%20Sites-2ee6c8?style=for-the-badge)](https://kaoyan-math-galaxy-5jmdkvkbn6k.qoder.zone)
 [![文档](https://img.shields.io/badge/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3-docs-3f8cff?style=for-the-badge)](docs/data-checklist.md)
-[![本地运行](#本地运行)](https://img.shields.io/badge/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C-npm%20run%20dev-c792ff?style=for-the-badge)
+[![本地运行](https://img.shields.io/badge/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C-npm%20run%20dev-c792ff?style=for-the-badge)](#本地运行)
 
 </div>
 
