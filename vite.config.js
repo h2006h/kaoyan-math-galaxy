@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  // 相对基址：同一份 dist 可部署在根路径（Qoder Sites）或子路径（GitHub Pages /repo/）
+  base: './',
   server: {
     port: 5173,
     host: true,

@@ -6,8 +6,9 @@
 
 import { judgeAnswer, settleAnswer, replayAccount } from './masteryEngine.js';
 import { loadRecords, appendRecord, clearRecords } from './recordStore.js';
+import { assetUrl } from './assetPath.js';
 
-const DATA_BASE = '/data'; // 后期: import.meta.env.VITE_API_BASE ?? '/data'
+const DATA_BASE = assetUrl('data'); // 后期: import.meta.env.VITE_API_BASE ?? assetUrl('data')
 const IMPORT_KEY = 'kmu:question_bank_imported'; // 管理员确认入库的题（演示环境持久化；接后端后换成 POST /api/questions）
 
 // 账号体系见 userStore.js（用户表 + 登录/注册）；数据层默认以演示账号的种子状态启动，

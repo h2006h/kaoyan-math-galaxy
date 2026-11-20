@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { CONFIG, isMobile } from './config.js';
+import { assetUrl } from '../data/assetPath.js';
 
 // 程序化生成柔和圆点贴图：全场景唯一一张通用圆形贴图，
 // 星野 / 尘埃 / 星云 / 核心共用，避免加载任何外部图片
@@ -396,7 +397,7 @@ export class Background {
       mat.needsUpdate = true;
     };
     img.onerror = () => {}; // 加载失败：保留深邃纯色底，不报错不白屏
-    img.src = CONFIG.background.skyTexture;
+    img.src = assetUrl(CONFIG.background.skyTexture);
   }
 
   #buildDome() {

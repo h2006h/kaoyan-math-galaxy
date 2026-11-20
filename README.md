@@ -12,7 +12,8 @@
 ![验证项](https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E6%97%B6%E9%AA%8C%E8%AF%81-120-ff9d6b?style=flat-square)
 ![离线](https://img.shields.io/badge/%E7%A6%BB%E7%BA%BF%E5%8F%AF%E7%94%A8-100%25-2ee6c8?style=flat-square)
 
-[![在线体验](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C-Qoder%20Sites-2ee6c8?style=for-the-badge)](https://kaoyan-math-galaxy-5jmdkvkbn6k.qoder.zone)
+[![在线体验](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E4%BD%93%E9%AA%8C-GitHub%20Pages-2ee6c8?style=for-the-badge)](https://h2006h.github.io/kaoyan-math-galaxy/)
+[![Deploy](https://github.com/h2006h/kaoyan-math-galaxy/actions/workflows/deploy.yml/badge.svg)](https://github.com/h2006h/kaoyan-math-galaxy/actions/workflows/deploy.yml)
 [![文档](https://img.shields.io/badge/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3-docs-3f8cff?style=for-the-badge)](docs/data-checklist.md)
 [![本地运行](https://img.shields.io/badge/%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C-npm%20run%20dev-c792ff?style=for-the-badge)](#本地运行)
 
@@ -85,7 +86,7 @@ npm run validate   # 数据 Schema + 引用完整性 + 公式可解析 + UI 泄�
 npm run verify     # 120 项运行时验证（需先 npm run dev，并使用本机 Chrome）
 ```
 
-> 在线体验地址为 Qoder Sites **私有**发布；若提示无权访问，请在站点设置中调整访问范围，或直接本地运行。
+> 在线体验由 **GitHub Pages** 自动发布：推送 `main` 后，Actions 会执行数据校验、构建并部署（工作流见 `.github/workflows/deploy.yml`）。Pages 上没有后端代理，小智与 AI 质检会自动进入「离线演示模式」；其余功能完整可用。
 
 ## 项目结构
 
@@ -100,6 +101,7 @@ public/
   textures/       星野天穹贴图
 server/           AI 后端代理（/api/ai/check、/api/ai/chat）与数据库 Schema
 scripts/          数据校验、运行时验证
+.github/          GitHub Actions：推送 main 自动构建并发布 Pages
 docs/             设计说明与答辩口径（数据清单 / 掌握度规则 / 视觉方案 / 部署等）
 ```
 
