@@ -6,6 +6,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { completeness } from './questionImport.js';
+import { IS_STATIC_HOST } from './deployEnv.js';
 
 const AI_ENDPOINT = '/api/ai/check';
 const CLIENT_TIMEOUT_MS = 12000; // 略大于代理的 10s 超时，让代理先返回明确错误
@@ -74,7 +75,7 @@ export function offlineSuggest(item, store) {
  * @returns {mode: 'online'|'offline', results: {key: suggestion}, error?}
  */
 export async function checkItems(items, store, { forceOffline = false } = {}) {
-  if (!forceOffline) {
+  if (!forceOffline && !IS_STATIC_HOST) {
     try {
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), CLIENT_TIMEOUT_MS);

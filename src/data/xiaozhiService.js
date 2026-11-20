@@ -9,6 +9,7 @@
 // ─────────────────────────────────────────────────────────────
 
 import { retrieve } from './ragEngine.js';
+import { IS_STATIC_HOST } from './deployEnv.js';
 
 const AI_ENDPOINT = '/api/ai/chat';
 const CLIENT_TIMEOUT_MS = 15000; // 略大于代理的 12s 超时，让代理先返回明确错误
@@ -56,7 +57,7 @@ export async function askXiaoZhi(store, question, { history = [], forceOffline =
   const rag = retrieve(store, question);
   const citations = citesOf(rag.pointHits);
 
-  if (!forceOffline) {
+  if (!forceOffline && !IS_STATIC_HOST) {
     try {
       const controller = new AbortController();
       const timer = setTimeout(() => controller.abort(), CLIENT_TIMEOUT_MS);
